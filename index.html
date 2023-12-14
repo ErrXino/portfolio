@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css">
+</head>
+
+<body>
+  <nav>
+    <h1 id="logo">"EQUIS"</h1>
+    <ul class="navigation-items">
+      <li class="navigation-item"><a href="#about-me">About Me</a></li>
+      <li class="navigation-item"><a href="#projects">Projects</a></li>
+      <li class="navigation-item"><a href="#skills">Skills</a></li>
+      <li class="navigation-item"><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about-me">
+      <div class="about-me-container">
+        <div class="about-me-text-container">
+          <img src="https://i.imgur.com/0gygf16.jpg"
+          alt="A photo of @xinodev (Nico)" class="portrait" />
+          <h2 class="about-me-title">ABOUT ME</h2>
+          <p>
+            Hello! I'm Nico, also known as <i>xino</i>. I am 20 years old and I'm from
+            Spain, but I can speak and write in English and German. I'm studying
+            to become a <b>Full Stack Engineer</b> because I've wanted to work in what
+            I love for a long time.
+          </p>
+          <p>
+            I am one of those who have learned everything through trial and error from
+            home. I have never attended university or studied anything related. It is now
+            that I have wanted to certify myself as a professional, and I have started
+            studying for the qualification.
+          </p>
+          <p>
+            In my free time, I like to continue with my clothing brand, create useful tools
+            for users for free, and also enjoy spending time with my friends to clear my mind.
+            It's always good to release some stress.
+          </p>
+          <p>
+            Fun fact! I've been programing for
+            <b><span id="time-container">0</span></b> seconds!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>MY PROJECTS</h2>
+      <details class="project">
+        <summary class="project-title">
+          <h3>Website Design System</h3>
+        </summary>
+        <img
+          src="https://i.imgur.com/FlzZl1C.png"
+          alt="A website design system" class="project-image" />
+        <p class="project-description">
+          A website design system to other developers. A system that can be used in a development team.
+        </p>
+      </details>
+      <details class="project">
+        <summary class="project-title">
+          <h3>Company Home Page with Flexbox</h3>
+        </summary>
+        <img
+          src="https://i.imgur.com/H8Bp3oo.png"
+          alt="A company home page with flexbox" class="project-image" />
+        <p class="project-description">
+          I make a Company Home Page with Flexbox for improving my skills.
+        </p>
+      </details>
+      <details class="project">
+        <summary class="project-title">
+          <h3>Number Guesser</h3>
+        </summary>
+        <img
+          src="https://i.imgur.com/0FIgWTG.png"
+          alt='A simply number guesser' class="project-image" />
+        <p class="project-description">
+          I was improving my skills in Javascript and I repaired the Number Guesser of the course.
+        </p>
+      </details>
+      <details class="project">
+        <summary class="project-title">
+          <h3>Responsive Club Website</h3>
+        </summary>
+        <img
+          src="https://i.imgur.com/BY7Zvhx.png"
+          alt='A simply responsive club website' class="project-image" />
+        <p class="project-description">
+          Trying and playing with responsive I created a Club Website.
+        </p>
+      </details>
+      <details class="project">
+        <summary class="project-title">
+          <h3>Tea Cozy</h3>
+        </summary>
+        <img
+          src="https://i.imgur.com/FyKyStv.png"
+          alt='A simply website' class="project-image" />
+        <p class="project-description">
+          Learning CSS I created this website with columns and margins, etc.
+        </p>
+      </details>
+      <details class="project">
+        <summary class="project-title">
+          <h3>"X" Clothing Store</h3>
+        </summary>
+        <img
+          src="https://i.imgur.com/nq4TRrG.png"
+          alt='A store in wordpress' class="project-image" />
+        <p class="project-description">
+          In my free time I was working in a store for my clothes ideas. I used Wordpress and WooCommerce.
+        </p>
+      </details>
+      <details class="project">
+        <summary class="project-title">
+          <h3>FocusTime App</h3>
+        </summary>
+        <img
+          src="https://i.imgur.com/YMJGlee.png"
+          alt='A simply electron.js app' class="project-image" />
+        <p class="project-description">
+          Also in my free time I was learning about electron.js and I made this simply APP.
+        </p>
+      </details>
+    </section>
+
+    <section id="skills">
+      <h2>SKILLS</h2>
+      <div id="skills-container">
+        <i class="fab fa-html5"></i>
+        <i class="fab fa-css3-alt"></i>
+        <i class="fab fa-js"></i>
+        <i class="fab fa-react"></i>
+        <i class="fab fa-git"></i>
+        <i class="fab fa-chrome"></i>
+        <i class="fas fa-terminal"></i>
+        <i class="fab fa-npm"></i>
+        <i class="fab fa-node"></i>
+        <i class="fab fa-github"></i>
+        <i class="fa-brands fa-wordpress"></i>
+        <i class="fa-solid fa-atom-simple"></i>
+      </div>
+    </section>
+  </main>
+
+  <footer>Made with <span class="heart">♥</span> in Spain</footer>
+</body>
+<script>
+  const timeContainer = document.getElementById("time-container");
+  const DAY_STARTING = "1-01-2017";
+  const DAY_STARTING_DATE = new Date(DAY_STARTING);
+  const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+  setInterval(() => {
+    const now = new Date();
+    const difference = Math.floor(
+      (now.getTime() - DAY_STARTING_DATE.getTime()) / 1000
+    );
+
+    timeContainer.innerText = intlNumberFormatter.format(difference);
+  }, 1000);
+</script>
+
+</html>
